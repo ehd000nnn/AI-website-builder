@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Website Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero-header">
+      <div>
+        <h1>AI Website Builder Service</h1>
+        <p>Describe your business and generate a ready-to-use website in seconds.</p>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="panel form-panel">
+        <h2>Project Details</h2>
+        <form id="siteForm">
+          <label>
+            Business Name
+            <input type="text" id="businessName" placeholder="Acme Coffee" required />
+          </label>
+
+          <label>
+            Industry / Niche
+            <input type="text" id="industry" placeholder="Coffee shop" required />
+          </label>
+
+          <fieldset>
+            <legend>Desired Pages</legend>
+            <div class="checkbox-grid">
+              <label><input type="checkbox" name="pages" value="Home" checked /> Home</label>
+              <label><input type="checkbox" name="pages" value="About" checked /> About</label>
+              <label><input type="checkbox" name="pages" value="Services" /> Services</label>
+              <label><input type="checkbox" name="pages" value="Portfolio" /> Portfolio</label>
+              <label><input type="checkbox" name="pages" value="Testimonials" /> Testimonials</label>
+              <label><input type="checkbox" name="pages" value="Contact" checked /> Contact</label>
+            </div>
+          </fieldset>
+
+          <label>
+            Color / Theme Preference
+            <input type="text" id="theme" placeholder="Minimal navy and white" required />
+          </label>
+
+          <div class="actions">
+            <button type="submit" id="generateBtn">Generate Website</button>
+            <button type="button" id="downloadBtn" disabled>Download ZIP</button>
+          </div>
+        </form>
+
+        <p id="status" class="status">Fill in the form and click "Generate Website".</p>
+
+        <div>
+          <h3>AI Suggestions</h3>
+          <ul id="suggestions" class="suggestions"></ul>
+        </div>
+      </section>
+
+      <section class="panel preview-panel">
+        <h2>Live Preview</h2>
+        <iframe id="previewFrame" title="Generated website preview"></iframe>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
