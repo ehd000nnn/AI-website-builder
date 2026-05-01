@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PokerIQ Pro | Strategy, Odds & AI Analytics</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <h1>PokerIQ Pro</h1>
+      <div class="plans-pill">Free + Pro</div>
+    </nav>
+    <section>
+      <h2>Master Poker with AI + Math-Driven Decisions</h2>
+      <p>
+        Train smarter with strategy playbooks, live odds engines, hand analytics, EV calculators,
+        and game-theory-inspired AI coaching for every street.
+      </p>
+      <div class="cta-row">
+        <button>Start Free</button>
+        <button class="outline">Upgrade to Pro</button>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="grid cards">
+      <article>
+        <h3>Free Version</h3>
+        <ul>
+          <li>Basic preflop charts (6-max, full ring)</li>
+          <li>Single-hand EV calculator</li>
+          <li>Pot odds / implied odds trainer</li>
+          <li>10 AI hand reviews per month</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Pro Version (Paid)</h3>
+        <ul>
+          <li>Unlimited EV + range-vs-range analysis</li>
+          <li>Population exploit reports & leak detection</li>
+          <li>Scenario database (flop/turn/river trees)</li>
+          <li>Real-time AI assistant & table simulation lab</li>
+          <li>Bankroll analytics and custom solver exports</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="calculator">
+      <h3>Expected Value Calculator</h3>
+      <p>Estimate EV for a decision: EV = (Win% × Pot) − (Lose% × Call Amount)</p>
+      <form id="ev-form">
+        <label>Win % <input type="number" id="winPct" min="0" max="100" value="42" required /></label>
+        <label>Current Pot ($) <input type="number" id="potSize" min="0" step="0.01" value="120" required /></label>
+        <label>Call Amount ($) <input type="number" id="callSize" min="0" step="0.01" value="50" required /></label>
+        <button type="submit">Calculate EV</button>
+      </form>
+      <p id="ev-result" class="result">Enter values to compute your edge.</p>
+    </section>
+
+    <section class="calculator">
+      <h3>Poker AI Coach (GTO-inspired)</h3>
+      <p>Describe your hand and spot to get a fast coaching suggestion.</p>
+      <form id="coach-form">
+        <textarea id="spot" rows="4" placeholder="Example: BTN opens 2.5bb, BB calls. Flop K♠8♣5♠, BB checks..." required></textarea>
+        <button type="submit">Analyze Spot</button>
+      </form>
+      <div id="coach-output" class="result">AI coach response appears here.</div>
+    </section>
+
+    <section class="grid cards">
+      <article>
+        <h3>Scenario Analytics Engine</h3>
+        <p>
+          Model every possible scenario using board textures, stack depth, positions, and villain tendencies.
+          Compare EV across fold/call/raise lines instantly.
+        </p>
+      </article>
+      <article>
+        <h3>Data Sources & Tracking</h3>
+        <p>
+          Connect your hand histories and track VPIP, PFR, 3-bet, c-bet, WWSF, river aggression, and showdown rates
+          with anomaly alerts.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <small>© 2026 PokerIQ Pro — Built for decision-quality poker intelligence.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
